@@ -6,8 +6,8 @@ while True:
         print("Now we will teach you to start create password wizard")
         web = input("First,what is the website for the password?(likes 'www.google.com'): ")
         usr = input("Next, what is the user for the password?(likes 'John'): ")
-        name = input("Then, what is the name for the password?(likes 'Business-Email')(No space!): ")
         pwd = input("Then, what is the password?(likes 'qwertyuiop'): ")
+        name = input("Then, what is the remark for the password?(likes 'Business-Email')(Space it not vaild!): ")
         instruction = input("Then, what is the password mean?(likes 'This password is for my business email'): ")
         webfile = name + "-" + "web"
         usrfile = name + "-" + "usr"
