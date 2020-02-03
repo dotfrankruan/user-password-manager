@@ -1,5 +1,27 @@
 import os
 import json
+
+#main program
+print("Welcome to Password Manager!")
+print("You are using upm-1.0")
+print("Only available on Microsoft Windows")
+print("Login at root@localhost")
+print("You want to..")
+print("1, Create a password")
+print("2, Delete a password")
+print("3, Change file extension")
+try:
+   fileextension = "ext.ini"
+   with open(fileextension, 'r') as f_obj:
+       fileext = f_obj.read()
+except FileNotFoundError:
+        os.system("echo json >> ext.ini")
+print("4, Program license")
+print("5, Read Memoried Password")
+print("6, Quit")
+print("7, Archive All Password")
+print("8, Extract Archived Password")
+print("9, Delete Archived Password")
 #functions
 while True:
     def createpwd():
@@ -101,27 +123,6 @@ while True:
         arcname = input("Archive Name(no extension): ")
         print("Deleting Archive...")
         os.system("del " + arcname + ".zip")
-    #main program
-    print("Welcome to Password Manager!")
-    print("You are using upm-1.0")
-    print("Only available on Microsoft Windows")
-    print("Login at root@localhost")
-    print("You want to..")
-    print("1, Create a password")
-    print("2, Delete a password")
-    print("3, Change file extension")
-    try:
-        fileextension = "ext.ini"
-        with open(fileextension, 'r') as f_obj:
-            fileext = f_obj.read()
-    except FileNotFoundError:
-        os.system("echo json >> ext.ini")
-    print("4, Program license")
-    print("5, Read Memoried Password")
-    print("6, Quit")
-    print("7, Archive All Password")
-    print("8, Extract Archived Password")
-    print("9, Delete Archived Password")
     opt = input(">>> ")
     if opt == "1":
         createpwd()
